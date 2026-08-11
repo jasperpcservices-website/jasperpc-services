@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JasperPC | Computer Services & Home Service</title>
+  <meta name="description" content="JasperPC provides computer repair, maintenance, networking, upgrades, laptop RAM upgrades, software installation, custom PC building and remote technical support.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>JasperPC Computer Services</span>
+      <span>HOME SERVICE AVAILABLE</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container main-header">
+      <a class="logo" href="#home"><strong>JASPER</strong><span>PC</span></a>
+      <div class="search">
+        <input id="serviceSearch" type="search" placeholder="Search services..." aria-label="Search services">
+        <button type="button" onclick="searchServices()">Search</button>
+      </div>
+      <a class="book-head" href="#booking">REQUEST JOB ORDER</a>
+    </div>
+    <nav class="category-nav">
+      <div class="container category-inner">
+        <a href="#home">Home</a>
+        <a href="#services">Computer Repair</a>
+        <a href="#services">Maintenance</a>
+        <a href="#services">Networking</a>
+        <a href="#services">PC Upgrades</a>
+        <a href="#services">Laptop RAM</a>
+        <a href="#services">Software</a>
+        <a href="#services">Custom PC Build</a>
+        <a href="#services">Remote Support</a>
+        <a href="#booking">Job Order</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <div class="small-title">PROFESSIONAL COMPUTER SERVICES</div>
+          <h1>WE FIX.<br>WE UPGRADE.<br><em>WE COME TO YOU.</em></h1>
+          <p>Computer repair, maintenance, networking, software installation, laptop upgrades, custom PC building and remote technical support — handled professionally and conveniently.</p>
+          <div class="hero-buttons">
+            <a class="button primary" href="#booking">Request a Home Service</a>
+            <a class="button light" href="#services">View All Services</a>
+          </div>
+          <div class="hero-points"><span>✓ Home Service</span><span>✓ PC & Laptop</span><span>✓ Remote Support</span><span>✓ By Request</span></div>
+        </div>
+        <div class="hero-info">
+          <div class="hero-info-head"><span>JASPERPC</span><b>COMPUTER SERVICES</b></div>
+          <div class="hero-feature"><span class="feature-number">01</span><div><b>ON-SITE SERVICE</b><p>We come to your home or location for hands-on computer service.</p></div></div>
+          <div class="hero-feature"><span class="feature-number">02</span><div><b>HARDWARE & SOFTWARE</b><p>Repair, upgrade, clean, configure and troubleshoot your computer.</p></div></div>
+          <div class="hero-feature"><span class="feature-number">03</span><div><b>REMOTE TECHNICAL SUPPORT</b><p>Get assistance for software, settings and troubleshooting when an on-site visit is not needed.</p></div></div>
+          <a class="hero-cta" href="#booking">START A JOB ORDER →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-strip">
+      <div class="container quick-grid">
+        <div class="quick-link" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})" role="button" tabindex="0"><b>HOME SERVICE</b><span>We come to your location</span></div>
+        <div class="quick-link" onclick="focusService('Computer Repair')" role="button" tabindex="0"><b>PC REPAIR</b><span>Desktop & laptop support</span></div>
+        <div class="quick-link" onclick="focusService('Computer Networking')" role="button" tabindex="0"><b>NETWORKING</b><span>Wi-Fi & network setup</span></div>
+        <div class="quick-link" onclick="focusService('Remote Technical Support')" role="button" tabindex="0"><b>REMOTE SUPPORT</b><span>Technical help from home</span></div>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-title">
+          <div><span>OUR SERVICES</span><h2>Real services. Real hands-on work.</h2></div>
+          <p>Click any service card to select it automatically in the Job Order Request form.</p>
+        </div>
+        <div id="serviceGrid" class="service-grid">
+          <article class="service-card" data-service="Computer Repair" data-search="computer repair troubleshooting laptop desktop hardware software">
+            <div class="card-top"><span>01</span><b>REPAIR</b></div>
+            <img class="service-photo" src="assets/computer-repair.jpg" alt="Computer repair service">
+            <h3>Computer Repair</h3><p>Diagnosis and repair for desktops, laptops, hardware faults, system issues and common computer problems.</p>
+            <a href="#booking" onclick="selectService('Computer Repair')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Computer Maintenance" data-search="maintenance cleaning thermal paste optimization computer dust fan">
+            <div class="card-top"><span>02</span><b>MAINTENANCE</b></div>
+            <img class="service-photo" src="assets/computer-maintenance.jpg" alt="Computer maintenance and cleaning service">
+            <h3>Computer Maintenance</h3><p>Internal cleaning, cooling checks, thermal maintenance and performance checks to keep your computer running properly.</p>
+            <a href="#booking" onclick="selectService('Computer Maintenance')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Computer Networking" data-search="network networking wifi router internet lan ethernet cabling">
+            <div class="card-top"><span>03</span><b>NETWORK</b></div>
+            <img class="service-photo" src="assets/computer-networking.jpg" alt="Computer networking and router setup">
+            <h3>Computer Networking</h3><p>Wi-Fi, router configuration, LAN setup, Ethernet connections and home or small-office network troubleshooting.</p>
+            <a href="#booking" onclick="selectService('Computer Networking')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Computer Upgrade" data-search="upgrade ram ssd gpu storage computer components">
+            <div class="card-top"><span>04</span><b>UPGRADE</b></div>
+            <img class="service-photo" src="assets/computer-upgrades.jpg" alt="Computer hardware upgrade service">
+            <h3>Computer Upgrades</h3><p>Upgrade RAM, SSD, storage, graphics and other compatible components to improve speed and capability.</p>
+            <a href="#booking" onclick="selectService('Computer Upgrade')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Laptop RAM Upgrade & Maintenance" data-search="laptop ram upgrade memory maintenance notebook cleaning performance">
+            <div class="card-top"><span>05</span><b>LAPTOP</b></div>
+            <img class="service-photo" src="assets/laptop-ram-upgrade.jpg" alt="Laptop RAM upgrade">
+            <h3>Laptop RAM Upgrade &amp; Maintenance</h3><p>Upgrade laptop memory, clean internal components and perform maintenance for smoother everyday performance.</p>
+            <a href="#booking" onclick="selectService('Laptop RAM Upgrade & Maintenance')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Software Installation" data-search="software windows installation drivers applications office setup updates">
+            <div class="card-top"><span>06</span><b>SOFTWARE</b></div>
+            <img class="service-photo" src="assets/software-installation.jpg" alt="Software installation on a laptop">
+            <h3>Software Installation</h3><p>Windows setup, drivers, applications, updates and software configuration for your PC or laptop.</p>
+            <a href="#booking" onclick="selectService('Software Installation')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Custom PC Building" data-search="custom pc build gaming desktop assembly components computer">
+            <div class="card-top"><span>07</span><b>BUILD</b></div>
+            <img class="service-photo" src="assets/custom-pc-building.jpeg" alt="Custom PC building service">
+            <h3>Custom PC Building</h3><p>Build a custom PC based on your budget, gaming needs, work requirements and preferred components.</p>
+            <a href="#booking" onclick="selectService('Custom PC Building')">REQUEST SERVICE →</a>
+          </article>
+
+          <article class="service-card" data-service="Remote Technical Support" data-search="remote technical support online troubleshooting software settings laptop computer">
+            <div class="card-top"><span>08</span><b>REMOTE</b></div>
+            <img class="service-photo" src="assets/remote-support.jpg" alt="Asian man working on a laptop from home for remote technical support">
+            <h3>Remote Technical Support</h3><p>Get remote assistance for software, settings, troubleshooting and other issues that can be handled online.</p>
+            <a href="#booking" onclick="selectService('Remote Technical Support')">REQUEST SERVICE →</a>
+          </article>
+        </div>
+        <div id="noResults" class="no-results">No matching service found.</div>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="container promo-inner">
+        <div><span>NEED HELP WITH YOUR COMPUTER?</span><h2>Don't carry it to a shop.<br>Let JasperPC come to you.</h2></div>
+        <a class="button white" href="#booking">Start a Job Order →</a>
+      </div>
+    </section>
+
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-title"><div><span>WHY JASPERPC</span><h2>A practical service, not complicated.</h2></div></div>
+        <div class="why-grid">
+          <div><b>01</b><h3>Convenient</h3><p>Get computer support without transporting your equipment across town.</p></div>
+          <div><b>02</b><h3>Clear Process</h3><p>Submit a Job Order Request, choose your preferred schedule and tell us what you need.</p></div>
+          <div><b>03</b><h3>You Stay in Control</h3><p>We review your request and reply to confirm the schedule or arrange a better time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="booking">
+      <div class="container booking-wrap">
+        <div class="booking-side">
+          <span>JOB ORDER REQUEST</span><h2>Tell us what you need.</h2>
+          <p>Submit your request with your preferred schedule. JasperPC will receive the job order in our email inbox, review availability and reply to confirm or reschedule.</p>
+          <div class="booking-list"><div><b>01</b> Choose your service</div><div><b>02</b> Select your preferred date and time</div><div><b>03</b> Enter your service address</div><div><b>04</b> Describe the problem or request</div><div><b>05</b> JasperPC replies to confirm or reschedule</div></div>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <div class="form-title">REQUEST JOB ORDER <span>JASPERPC</span></div>
+          <div class="form-row">
+            <label>Full Name *<input name="name" required placeholder="Your full name"></label>
+            <label>Phone Number *<input name="phone" required placeholder="09XX XXX XXXX"></label>
+          </div>
+          <div class="form-row">
+            <label>Email Address *<input type="email" name="email" required placeholder="your@email.com"></label>
+            <label>Service *<select id="serviceSelect" name="service" required>
+              <option value="">Select service</option><option>Computer Repair</option><option>Computer Maintenance</option><option>Computer Networking</option><option>Computer Upgrade</option><option>Laptop RAM Upgrade & Maintenance</option><option>Software Installation</option><option>Custom PC Building</option><option>Remote Technical Support</option>
+            </select></label>
+          </div>
+          <label>Service Address *<input name="address" required placeholder="Complete address for home service"></label>
+          <div class="form-row">
+            <label>Preferred Date *<input id="date" type="date" name="date" required></label>
+            <label>Preferred Time *<select name="time" required><option value="">Select time</option><option value="09:00">9:00 AM</option><option value="10:00">10:00 AM</option><option value="11:00">11:00 AM</option><option value="13:00">1:00 PM</option><option value="14:00">2:00 PM</option><option value="15:00">3:00 PM</option><option value="16:00">4:00 PM</option><option value="17:00">5:00 PM</option><option value="18:00">6:00 PM</option></select></label>
+          </div>
+          <label>Problem / Request Details<textarea name="details" rows="5" placeholder="Describe the issue, upgrade, network setup, software request or PC build you need."></textarea></label>
+          <button class="button primary submit" type="submit">SUBMIT JOB ORDER REQUEST</button>
+          <p id="formStatus"></p>
+          <small>Your request is not an automatic confirmation. JasperPC will review the schedule and reply to your email.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#home"><strong>JASPER</strong><span>PC</span></a>
+        <p>Computer services, upgrades, maintenance and home service.</p>
+      </div>
+      <div><b>QUICK LINKS</b><a href="#home">Home</a><a href="#services">Services</a><a href="#booking">Job Order</a></div>
+      <div><b>OUR SERVICES</b><a href="#services" onclick="selectService('Computer Repair')">Computer Repair</a><a href="#services" onclick="selectService('Computer Networking')">Networking</a><a href="#services" onclick="selectService('Laptop RAM Upgrade & Maintenance')">Laptop RAM Upgrade</a><a href="#services" onclick="selectService('Remote Technical Support')">Remote Support</a></div>
+      <div><b>CONTACT</b><span>jasperpcservices@gmail.com</span><span>Home Service by Appointment</span></div>
+      <div class="follow"><b>FOLLOW US</b><a class="facebook-link" href="https://www.facebook.com/profile.php?id=61593187077439" target="_blank" rel="noopener noreferrer" aria-label="JasperPC Facebook page"><span class="facebook-icon">f</span><span>Facebook</span></a></div>
+    </div>
+    <div class="container footer-bottom">© 2026 JasperPC Computer Services & Home Service. All rights reserved.<span>Job Orders • Home Service • Remote Support</span></div>
+  </footer>
+
+  <script src="script.js?v=20260812"></script>
+</body>
+</html>
