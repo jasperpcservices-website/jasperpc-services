@@ -15,3 +15,11 @@ Vercel-ready static website for JasperPC.
 
 ## Vercel
 Upload the contents of this folder as a Vercel project. `index.html` must be at the project root.
+
+## Latest update - August 12, 2026
+- Added Computer Shop & Pisonet Maintenance service.
+- Added the owner's uploaded computer-shop/Pisonet photo as the service image.
+- Customer Email Address is now optional in the Job Order form.
+- Removed placeholder/example text from the form fields.
+- Updated the supplied Google Apps Script so blank customer email is accepted.
+- No Google Calendar event, invitation, or Google Meet is created by the Job Order email system.

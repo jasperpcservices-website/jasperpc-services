@@ -18,15 +18,18 @@ function selectService(service){
 function focusService(service){
   const cards=[...document.querySelectorAll(".service-card")];
   const card=cards.find(c=>c.dataset.service===service);
-  document.getElementById("services").scrollIntoView({behavior:"smooth",block:"start"});
-  if(card){
-    cards.forEach(c=>c.classList.remove("service-highlight"));
-    setTimeout(()=>{
-      card.classList.add("service-highlight");
-      card.scrollIntoView({behavior:"smooth",block:"center"});
-      setTimeout(()=>card.classList.remove("service-highlight"),2200);
-    },250);
-  }
+  if(!card) return;
+
+  // Scroll directly to the selected service card. This is especially important
+  // on mobile, where jumping to the generic #services section feels like the
+  // user was sent to the top instead of the service they tapped.
+  cards.forEach(c=>c.classList.remove("service-highlight"));
+  card.classList.add("service-highlight");
+  card.scrollIntoView({behavior:"smooth",block:"center"});
+
+  // Keep the URL clean instead of leaving #services/#service-... in the address bar.
+  if(history.replaceState){ history.replaceState(null,"",location.pathname+location.search); }
+  setTimeout(()=>card.classList.remove("service-highlight"),2400);
 }
 
 document.querySelectorAll(".quick-link").forEach(el=>el.addEventListener("keydown",e=>{
@@ -72,6 +75,7 @@ form.addEventListener("submit",async e=>{
   e.preventDefault();
   const button=form.querySelector("button");
   const data=Object.fromEntries(new FormData(form).entries());
+  // Customer email is optional. An empty email is submitted as an empty string.
   button.disabled=true;
   button.textContent="SUBMITTING...";
   statusEl.textContent="Sending job order request...";

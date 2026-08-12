@@ -63,3 +63,25 @@ footer{background:#20252d;color:#aeb6c0;padding:40px 0 18px}.footer-grid{display
 @media(max-width:1000px){.footer-grid{grid-template-columns:1.5fr 1fr 1.3fr 1.2fr}.follow{grid-column:span 2}}
 @media(max-width:850px){.hero-wrap{grid-template-columns:1fr}.hero-info{max-width:700px}.service-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.hero-info{padding:22px}.hero-info-head{display:block}.hero-info-head b{display:block;margin-top:5px}.service-grid{grid-template-columns:1fr}.service-photo{height:200px}.footer-grid{grid-template-columns:1fr}.follow{grid-column:auto}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:8px}}
+
+
+/* Mobile navigation: land on the exact service selected, not the top of Services. */
+.service-card{scroll-margin-top:120px}
+.why-section .section-title>div>span{display:inline-block;white-space:nowrap;letter-spacing:0;word-spacing:0;min-width:max-content}
+@media(max-width:560px){
+  .service-card{scroll-margin-top:135px}
+  .why-section .section-title>div>span{font-size:12px;letter-spacing:0;word-spacing:0}
+}
+
+/* Optional field label */
+.optional-label {
+  font-weight: 500;
+  font-size: 0.78em;
+  opacity: 0.72;
+  margin-left: 0.25rem;
+}
+
+/* Keep the added bulk-service card visually consistent on all screen sizes. */
+#service-computer-shop-pisonet .service-photo {
+  object-position: center center;
+}
